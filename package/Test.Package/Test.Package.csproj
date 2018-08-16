@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>mpetito.test.nuget</PackageId>
+    <Authors>mpetito</Authors>
+    <Company>mpetito</Company>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+  </PropertyGroup>
+
+</Project>
