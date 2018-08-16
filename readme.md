@@ -20,9 +20,9 @@ Step 4 fails to restore the new package version, even after waiting several hour
 ## Restore / Build the Project
 In project/Test.Project:
 
- 1. dotnet restore --no-cache
- 2. dotnet build
- 3. dotnet run
+ 1. `dotnet restore --no-cache`
+ 2. `dotnet build`
+ 3. `dotnet run`
 
 Note the output: "Current Package Version 1.0.X"
 
@@ -30,20 +30,20 @@ Note the output: "Current Package Version 1.0.X"
 In package/Test.Package:
 
  1. Increment patch level for Version and AssemblyVersion in Test.Package.csproj
- 2. dotnet nuget pack -o .
- 3. dotnet nuget push .\*.nupkg -k oy2nske6pevupvmtvivqxrsk2baleizu3brb3i75vkgfie
+ 2. `dotnet nuget pack -o .`
+ 3. `dotnet nuget push .\*.nupkg -k oy2nske6pevupvmtvivqxrsk2baleizu3brb3i75vkgfie`
 
 ## Wait for the New Package to be Listed
 Verify listing at https://www.nuget.org/packages/mpetito.test.nuget/
- - wait for validation so the package is available for restore
- - wait for nuget http-cache expiration, at least 30 minutes
+ - Wait for validation so the package is available for restore
+ - Wait for nuget http-cache expiration, at least 30 minutes
 
 ## Attempt to Restore New Package Version
 In project/Test.Project:
 
- 1. dotnet restore
- 2. dotnet build
- 3. dotnet run
+ 1. `dotnet restore`
+ 2. `dotnet build`
+ 3. `dotnet run`
 
 Note the output:
  > Current Package Version 1.0.X
@@ -53,9 +53,9 @@ Expected:
 ## Workaround / Package Version Verification
 To verify that restore should see the new package version:
 
- 1. dotnet restore --no-cache
- 2. dotnet build
- 3. dotnet run
+ 1. `dotnet restore --no-cache`
+ 2. `dotnet build`
+ 3. `dotnet run`
 
 Verify the output now shows:
  > Current Package Version 1.0.(X+1)
