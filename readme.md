@@ -45,10 +45,10 @@ In project/Test.Project:
  2. `dotnet build`
  3. `dotnet run`
 
-Note the output:
+Note the output, which shows an old version and indicates the newest version was not restored as expected:
  > Current Package Version 1.0.X
 
-Expected output (should show the new version published under Publish a New Package Version):
+Expected output, which should show the newest version:
  > Current Package Version 1.0.(X+1)
 
 ## Workaround / Package Version Verification
