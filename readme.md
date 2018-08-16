@@ -47,7 +47,8 @@ In project/Test.Project:
 
 Note the output:
  > Current Package Version 1.0.X
-Expected:
+
+Expected output (should show the new version published under Publish a New Package Version):
  > Current Package Version 1.0.(X+1)
 
 ## Workaround / Package Version Verification
